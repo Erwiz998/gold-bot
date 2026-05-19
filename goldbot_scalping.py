@@ -62,7 +62,7 @@ async def get_candles(account):
     try:
         # Pakai MetaApi History API
         end_time   = datetime.now(timezone.utc)
-        start_time = end_time - timedelta(days=5)  # ambil 5 hari data
+        start_time = end_time - timedelta(days=3)  # ambil 5 hari data
 
         candles = await account.get_historical_candles(
             symbol    = SYMBOL,
