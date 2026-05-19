@@ -68,10 +68,11 @@ async def send_notif(text: str):
 # ─── AMBIL DATA DARI METAAPI ─────────────────────────────────────
 async def get_candles(connection):
     try:
-        candles = await connection.get_historical_candles(
-            symbol=SYMBOL,
-            timeframe=TIMEFRAME,
-            limit=250
+        candles = await connection.get_candles(
+    symbol=SYMBOL,
+    timeframe=TIMEFRAME,
+    start_time=None,
+    limit=250
         )
         if not candles:
             raise Exception("Data kosong dari MetaAPI")
