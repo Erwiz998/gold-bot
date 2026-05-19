@@ -1,0 +1,4 @@
+metaapi-cloud-sdk
+aiohttp
+pandas
+numpy
